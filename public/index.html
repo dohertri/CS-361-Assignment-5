@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="App.css" />
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard CS 361</title>
+</head>
+
+<body>
+    
+    <header>
+        <h1>Time Card Application</h1>
+    </header>
+
+    <main>
+           
+        <aside> 
+            <p>Sick Days: </p>
+            <p>Vacation Days: </p>
+            <p>Pay Period Hours: </p>
+            <form action="http://localhost:3000/employeePortal/employeePortal.html">
+                <button type="Submit" id = "employeePortal" title="Explore Employment Data" disabled>Employee Portal</button>
+            </form>
+        </aside> 
+
+        <section>
+            
+                <h2>Login</h2>
+                <p>Name <select name="employeeName" id="emplyeeName" required = "required">
+                            <option value="Richard Doherty">Richard Doherty</option>
+                            <option value="Mike Doherty">Mike Doherty</option>
+                            <option value="Nick Roberts">Nick Roberts</option>
+                            <option value="Nancy Drew">Nancy Drew</option>
+                        </select>
+                </p>
+                <p>Password <input type="password" required = "required"></p>
+                <button type = "Submit" id = "infoSubmit">Submit</button>
+            
+        </section>
+
+        <section>
+            
+        
+            <!-- Current Date -->
+            Current Date:
+                <input type="text" id="currentDate">
+                <br><br>
+                <!-- Current Time -->
+            Current Time:
+                <input type="text" id="currentTime">
+                <br><br>
+                <script>
+                    let today = new Date();
+
+                    let date = (today.getMonth()+1) + '-' + today.getDate() + '-' + today.getFullYear();
+                    document.getElementById("currentDate").value = date;
+                    let hour = today.getHours();
+                    if(hour > 12){
+                        hour -= 12;
+                    }
+                    let time = hour + ":" + today.getMinutes() + ":" + today.getSeconds();
+                    document.getElementById("currentTime").value = time;
+                </script>
+
+                <button type = "submit" class = "modal-btn" id="clockBtn" disabled>Clock In</button>
+
+                <div class="modal-bg">
+                    <div class="modal">
+                        <p id = "clockMsg"></p>
+                        <p><button class="modal-close " >Accept</button><button>Undo</button></p>
+                    </div>
+                </div>      
+                <script src = "index.js"></script>
+                
+            
+        </section>
+    </main>
+</body>
+</html>

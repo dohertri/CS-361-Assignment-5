@@ -1,0 +1,83 @@
+
+@import '../node_modules/modern-normalize/modern-normalize.css';
+/* npm install modern-normalize 
+  Resets elements for browser consistancy.  
+  http://nicolasgallagher.com/about-normalize-css/ 
+*/
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {       /* Can alternatively define in html {} or :root {} */
+background-color:white;
+}
+
+h2{
+margin-bottom: -10px;
+}
+h3{
+  margin-top: -10px;
+}
+header{
+font-style: italic;
+text-align: left;
+background-color:rgb(255, 94, 0);
+}
+
+footer{
+text-align: center;
+}
+
+section {
+margin: 20px;
+padding: 10px;
+border-style: double;
+width: 50%;
+margin-left: 25%;
+background-color: rgb(233, 233, 233);
+}
+
+a {
+  margin-left: 48%;
+}
+
+.tableFixHead {
+overflow-y: auto;
+height: 200px;
+}
+.tableFixHead thead th {
+position: sticky;
+top: 0;
+}
+table {
+border-collapse: collapse;
+align-self: center;
+table-layout: fixed;
+width: 100%;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+th, td {
+padding: 8px 16px;
+border: 1px solid #ccc;
+background-color: white;
+width: 50%;
+
+}
+th {
+background: rgb(187, 185, 185);
+}
+tr td{
+text-align: center;
+}
+
+@keyframes App-logo {}
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 600px) {}
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+@media all and (min-width: 1080px) {}
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+@media print {}

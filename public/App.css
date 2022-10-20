@@ -1,0 +1,115 @@
+
+@import '../node_modules/modern-normalize/modern-normalize.css';
+          /* npm install modern-normalize 
+            Resets elements for browser consistancy.  
+            http://nicolasgallagher.com/about-normalize-css/ 
+          */
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {       /* Can alternatively define in html {} or :root {} */
+background-color:white;
+}
+
+header{
+  font-style: italic;
+  text-align: left;
+  background-color:rgb(255, 94, 0);
+  }
+
+section {
+  border-style: double;
+  width: 40%;
+  padding: 10px;
+  margin: 10px;
+  background-color: whitesmoke;
+}
+
+aside {
+  float: right;
+  width: 40%;
+  height: 20%;
+  padding-top: 10px; 
+  font-style: italic;
+  text-align: left;
+}
+
+form p input, form p select{
+  align-items: center;
+  float: right;
+  width: auto;
+  min-width: 100px; 
+  width: 75%;
+  
+}
+
+
+
+table {
+  border-collapse:collapse;
+  width: fit-content;
+
+}
+caption {
+  padding:1% 0;
+}
+thead {
+  height:40px;
+  }
+
+tbody {}
+
+tfoot {}
+
+tr td {
+  border-top: 1px solid darkgray;
+  min-width:100px;
+  text-align: center;
+  }
+
+
+.modal-bg{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+}
+
+.bg-active{
+  visibility: visible;
+  opacity: 1;
+}
+
+.bg-close{
+
+  visibility: hidden;
+  opacity: 0;
+}
+.modal{
+  position: relative;
+  background-color: white;
+  width: 50%;
+  height: 15%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 600px) {}
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+@media all and (min-width: 1080px) {}
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+@media print {}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <link rel="stylesheet" href="editEmployee.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>editEmployee</title>
+</head>
+<body>
+    <header>
+        <h1>Add/Modify Employee Profile</h1>
+    </header>
+    <section>
+        <p><input type="checkbox" id = "addNew"> Add New Employee <input type="text"></p>
+        <p><input type="checkbox"id = "modCurrent">Modify Current Employee 
+            <select name="employee" id="employee">
+                <option value="Richard Doherty">Richard Doherty</option>
+                <option value="Mike Doherty">Mike Doherty</option>
+                <option value="Nick Roberts">Nick Roberts</option>
+                <option value="Nancy Drew">Nancy Drew</option>
+            </select>
+        
+        </article>
+        
+        
+    </section>
+    <section>
+        <h3>Permissions</h3>
+        <p><input type="checkbox" id= "manualClock"> Manual Clock In/Out Entry</p>
+        <p><input type="checkbox" id= "applySickVacation"> Apply Sick/Vacation Days</p>
+        <p><input type="checkbox" id= "modifyUsers"> Modify User Profiles</p>
+        <p><input type="checkbox" id= "modifyPolicy"> Modify Company Policy </p>
+        <p><input type="checkbox" id= "checkEmployee"> Check Present Employees</p>
+    </section>
+    <section>
+        <h3>Sick/Vacation</h3>
+        <p>Sick Days: <input type="number" id="sickDays"></p>
+        <p>Vacation Days: <input type="number" id="vacationDays"></p>
+    </section>
+    <section>
+        <h3>Password</h3>
+        <p>Set Password : <input type="password"></p>
+        <p>Confirm Password : <input type="password"></p>
+    </section>
+    <div>
+        <button>Apply</button>
+        <a href="http://localhost:3000/employeePortal/employeePortal.html">
+            <button>Back</button>
+        </a>
+    </div>
+</body>
+</html>
